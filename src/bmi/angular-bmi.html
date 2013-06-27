@@ -8,7 +8,7 @@
             if(isNaN(input)){
                 return "I can't caculate your BMI";
             }else{
-                return "Your BMI is"+input;
+                return "Your BMI is ["+input+"]";
             }    
         }
     }
@@ -23,7 +23,7 @@
             Weight:<input type="text" ng-model="urWeight" placeholder="Enter your weight">kg<br>
           </fieldset>
         </form>
-        <h1>{{getBmiString(urWeight/(urHeight*urHeight))}}</h1>
+        <h1>{{getBmiString(urWeight/(urHeight*urHeight)*10000)}}</h1>
     </div>
   </body>
 </html>
